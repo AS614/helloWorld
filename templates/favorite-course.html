@@ -1,0 +1,23 @@
+
+{% extends "base.html" %}
+
+{% block page_title %}Favorite Course{% endblock %}
+
+{% block page_head %}My Favorite Course{% endblock %}
+
+{% block page_content %}
+    <div class="card shadow-sm">
+        <div class="card-body">
+            {% if subject and course_number %}
+                <p class="fs-5">
+                    You entered your favorite course as:
+                    <strong>{{ subject }}{{ course_number }}</strong>
+                </p>
+            {% else %}
+                <p class="text-muted">
+                    Please enter a subject and course number in the URL.
+                </p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
